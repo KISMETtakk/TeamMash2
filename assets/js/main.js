@@ -8,6 +8,26 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeModals();
     initializeFormValidation();
     hideLoadingScreen();
+
+     // Endorsement toggle logic
+const viewAllBtn = document.getElementById('view-all-btn');
+const viewLessBtn = document.getElementById('view-less-btn');
+const hiddenEndorsements = document.querySelectorAll('.hidden-endorsement');
+
+if (viewAllBtn && viewLessBtn) {
+    viewAllBtn.addEventListener('click', () => {
+        hiddenEndorsements.forEach(el => el.style.display = 'block');
+        viewAllBtn.style.display = 'none';
+        viewLessBtn.style.display = 'inline-block';
+    });
+
+    viewLessBtn.addEventListener('click', () => {
+        hiddenEndorsements.forEach(el => el.style.display = 'none');
+        viewAllBtn.style.display = 'inline-block';
+        viewLessBtn.style.display = 'none';
+    });
+}
+    
 });
 
 // Hide loading screen

@@ -1330,7 +1330,12 @@ body {
   background: transparent;
 }
 
-/* Mission Section */
+/* Endorse Section */
+.hidden-endorsement {
+    display: none;
+}
+
+
 /* Team Section */ 
 .team {
     padding: 100px 0;

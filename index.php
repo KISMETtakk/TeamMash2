@@ -10,10 +10,10 @@ try {
     $db = $database->getConnection();
     
     $query = "SELECT name, message, avatar_path, created_at FROM endorsements 
-              WHERE is_approved = 1 ORDER BY created_at DESC LIMIT 6";
+              WHERE is_approved = 1 ORDER BY created_at DESC ";
     $stmt = $db->prepare($query);
     $stmt->execute();
-    $recent_endorsements = $stmt->fetchAll();
+    $endorsements = $stmt->fetchAll();
     
     $endorsement_count_query = "SELECT COUNT(*) as total FROM endorsements WHERE is_approved = 1";
     $count_stmt = $db->prepare($endorsement_count_query);
@@ -25,6 +25,9 @@ try {
     $recent_endorsements = [];
     $endorsement_count = 0;
 }
+
+include 'includes/header.php';
+?>
 
 include 'includes/header.php';
 ?>
@@ -189,17 +192,17 @@ include 'includes/header.php';
 </section>
 
 <!-- Recent Endorsements -->
-<?php if (!empty($recent_endorsements)): ?>
+<?php if (!empty($endorsements)): ?>
 <section class="recent-endorsements">
     <div class="container">
         <div class="section-header">
             <h2 class="section-title">Recent Endorsements</h2>
             <p class="section-subtitle">What supporters are saying</p>
         </div>
-        
+
         <div class="endorsements-grid">
-            <?php foreach ($recent_endorsements as $endorsement): ?>
-            <div class="endorsement-card animate-on-scroll">
+            <?php foreach ($endorsements as $index => $endorsement): ?>
+            <div class="endorsement-card animate-on-scroll<?php echo $index >= 6 ? ' hidden-endorsement' : ''; ?>">
                 <div class="endorsement-avatar">
                     <?php if ($endorsement['avatar_path']): ?>
                         <img src="<?php echo htmlspecialchars($endorsement['avatar_path']); ?>" 
@@ -224,11 +227,14 @@ include 'includes/header.php';
             </div>
             <?php endforeach; ?>
         </div>
-        
+
         <div class="text-center">
-            <a href="endorse.php" class="btn btn-outline">
+            <button id="view-all-btn" class="btn btn-outline">
                 <i class="fas fa-eye"></i> View All Endorsements
-            </a>
+            </button>
+            <button id="view-less-btn" class="btn btn-outline" style="display: none;">
+                <i class="fas fa-eye-slash"></i> View Less Endorsements
+            </button>
         </div>
     </div>
 </section>
