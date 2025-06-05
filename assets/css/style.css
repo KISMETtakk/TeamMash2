@@ -1064,6 +1064,56 @@ body {
   background: transparent;
 }
 
+/* Mission Section */
+/* Team Section */ 
+.team {
+    padding: 100px 0;
+    background-color: var(--bg-light);
+    text-align: center;
+}
+
+.team-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+
+/* .team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+} */
+
+
+.team-image {
+    width: 350px;
+    height: 350px;
+    /* border-radius: 50%; */
+    overflow: hidden;
+    margin: 0 auto 30px;
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    object-position: center 40%;
+}
+
+.team-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.team-card p {
+    color: var(--text-light);
+    line-height: 1.8;
+    
+}
+
+
 @media (max-width: 600px) {
   .tshiamo-builds-title {
     font-size: 1.5rem;

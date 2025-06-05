@@ -256,4 +256,40 @@ include 'includes/header.php';
     </div>
 </section>
 
+<!-- Team Section -->
+<section id="team" class="team">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Meet The Team</h2>
+            <p class="section-subtitle">ICEP Innovators, Building Tomorrow</p>
+        </div>
+        
+        <div class="team-content">
+            <div class="team-card animate-on-scroll">
+                <div class="team-image">
+                    <img src="images/Msizi.jpg" alt="Msizi Makaula">
+                </div>
+                <h3>Msizi Makaula</h3>
+                <p>FrontEnd Developer</p>
+            </div>
+            
+            <div class="team-card animate-on-scroll">
+                <div class="team-image">
+                    <img src="images/Tshiamo.jpg" alt="Tshiamo Matiza">
+                </div>
+                <h3>Tshiamo Matiza</h3>
+                <p>FullStack Developer</p>
+            </div>
+            
+            <div class="team-card animate-on-scroll">
+                <div class="team-image">
+                    <img src="images/Gucci.jpg" alt="Michael Sibanda">
+                </div>
+                <h3>Michael Sibanda</h3>
+                <p>Scrum Master</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <?php include 'includes/footer.php'; ?>

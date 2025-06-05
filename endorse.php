@@ -303,7 +303,7 @@ include 'includes/header.php';
 </section>
 
 <!-- Endorsements Display -->
-<?php if (!empty($endorsements)): ?>
+ <!-- <?php if (!empty($endorsements)): ?>
 <section class="endorsements-display">
     <div class="container">
         <div class="section-header">
@@ -350,7 +350,7 @@ include 'includes/header.php';
         </div>
     </div>
 </section>
-<?php endif; ?>
+<?php endif; ?>  -->
 
 <!-- Call to Action -->
 <section class="cta">
