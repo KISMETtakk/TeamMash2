@@ -30,16 +30,22 @@
                 <div class="footer-section">
                     <h4>Campaign</h4>
                     <p class="campaign-slogan">"For A Smarter, Stronger Council"</p>
-                    <p class="vote-text">Vote Phurutsi 2024</p>
+                    <p class="vote-text">Vote Phurutsi For Council</p>
                 </div>
             </div>
             
-            <div class="footer-bottom">
-                <p>&copy; <?php echo date('Y'); ?> Mashitishi B. Phurutsi Campaign. All rights reserved.</p>
-                <p class="popia-notice">
-                    <a href="#" onclick="showPopiaModal()">POPIA Privacy Notice</a>
-                </p>
-            </div>
+<div class="footer-bottom">
+    <p>&copy; <?php echo date('Y'); ?> Mashitishi B. Phurutsi Campaign. All rights reserved.</p>
+    <p class="popia-notice1">Developed & Designed By 
+        <a  href="https://www.linkedin.com/in/tshiamo-matiza-3685a42a5" target="_blank" rel="noopener noreferrer">Tshiamo Matiza</a>, 
+        <a href="https://www.linkedin.com/in/msizi-makaula-619a742ab/" target="_blank" rel="noopener noreferrer">Msizi Makaula</a>, 
+        <a  href="https://www.linkedin.com/in/michael-sibanda-64ba42245/" target="_blank" rel="noopener noreferrer">Michael Sibanda</a>
+    </p>
+    <p class="popia-notice">
+        <a href="#" onclick="showPopiaModal()">POPIA Privacy Notice</a>
+    </p>
+</div>
+
         </div>
     </footer>
 

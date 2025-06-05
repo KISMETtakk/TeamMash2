@@ -11,6 +11,7 @@
     --accent-color: #e74c3c;
     --success-color: #27ae60;
     --warning-color: #f39c12;
+    --warning-color2: #e74c3c;
     --text-color: #2c3e50;
     --text-light: #7f8c8d;
     --bg-color: #ffffff;
@@ -127,6 +128,258 @@ body {
 .nav-menu {
     display: flex;
     gap: 30px;
+}
+
+/* Add this to your existing style.css file */
+
+/* Professional Photo Styling */
+.professional-photo {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 4px solid rgba(255,255,255,0.2);
+    transition: var(--transition);
+}
+
+.professional-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+/* Contact Page Specific Styles */
+.contact-hero {
+    padding: 120px 0 80px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-align: center;
+}
+
+.contact-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.contact-subtitle {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: rgba(255,255,255,0.9);
+}
+
+.contact-section {
+    padding: 80px 0;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.contact-info h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.contact-methods {
+    margin: 40px 0;
+}
+
+.contact-method {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: var(--bg-light);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.contact-method:hover {
+    transform: translateX(10px);
+    box-shadow: var(--shadow);
+}
+
+.method-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.method-info h4 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.method-info p {
+    color: var(--text-light);
+    margin-bottom: 8px;
+}
+
+.method-link {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.method-link:hover {
+    color: var(--primary-color);
+}
+
+.method-text {
+    color: var(--text-light);
+    font-style: italic;
+}
+
+.social-connect {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.social-connect h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.contact-form-container {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-hover);
+}
+
+.contact-form-container h2 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.campaign-info {
+    padding: 80px 0;
+    background: var(--bg-light);
+}
+
+.campaign-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.campaign-points {
+    margin: 30px 0;
+}
+
+.point {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.point i {
+    color: var(--success-color);
+    font-size: 1.1rem;
+}
+
+.campaign-cta {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.campaign-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.stat-item .stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.stat-item .stat-label {
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .professional-photo {
+        width: 250px;
+        height: 320px;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .contact-method {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .campaign-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .campaign-cta {
+        justify-content: center;
+    }
+    
+    .contact-title {
+        font-size: 2rem;
+    }
+    
+    .contact-subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .professional-photo {
+        width: 200px;
+        height: 260px;
+    }
+    
+    .contact-form-container {
+        padding: 20px;
+    }
+    
+    .campaign-cta {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .nav-link {
@@ -869,11 +1122,24 @@ body {
 }
 
 .popia-notice a {
-    color: var(--warning-color);
+    color: var(--warning-color2);
     text-decoration: none;
 }
 
 .popia-notice a:hover {
+    text-decoration: underline;
+}
+
+.popia-notice1 {
+    margin-top: 10px;
+}
+
+.popia-notice1 a {
+    color: var(--warning-color);
+    text-decoration: none;
+}
+
+.popia-notice1 a:hover {
     text-decoration: underline;
 }
 

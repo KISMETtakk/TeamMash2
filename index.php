@@ -72,10 +72,7 @@ include 'includes/header.php';
                 </div>
             </div>
             <div class="hero-image animate-slide-in-right">
-                <div class="image-placeholder">
-                    <i class="fas fa-user-tie"></i>
-                    <p>Professional Photo</p>
-                </div>
+                <img src="images/photo7.jpg" alt="Mashitishi B. Phurutsi - Professional Photo" class="professional-photo">
             </div>
         </div>
     </div>
@@ -138,7 +135,6 @@ include 'includes/header.php';
     </div>
   </div>
 </section>
-
 
 <!-- Mission Section -->
 <section id="mission" class="mission">
