@@ -1112,7 +1112,15 @@ body {
     line-height: 1.8;
     
 }
+.team-card a {
+    color: #f39c12;
+    text-decoration: none; /* optional: remove underline */
+    font-weight: 500; /* optional: make it a bit bolder */
+}
 
+.team-card a:hover {
+    text-decoration: underline; /* underline on hover for clarity */
+}
 
 @media (max-width: 600px) {
   .tshiamo-builds-title {

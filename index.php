@@ -271,6 +271,7 @@ include 'includes/header.php';
                 </div>
                 <h3>Msizi Makaula</h3>
                 <p>FrontEnd Developer</p>
+                <a href="https://www.linkedin.com/in/msizi-makaula-619a742ab/" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
             </div>
             
             <div class="team-card animate-on-scroll">
@@ -279,6 +280,7 @@ include 'includes/header.php';
                 </div>
                 <h3>Tshiamo Matiza</h3>
                 <p>FullStack Developer</p>
+                 <a href="https://www.linkedin.com/in/tshiamo-matiza-3685a42a5" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
             </div>
             
             <div class="team-card animate-on-scroll">
@@ -287,6 +289,8 @@ include 'includes/header.php';
                 </div>
                 <h3>Michael Sibanda</h3>
                 <p>Scrum Master</p>
+                <a href="https://www.linkedin.com/in/michael-sibanda-64ba42245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+                
             </div>
         </div>
     </div>
