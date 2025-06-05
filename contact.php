@@ -2,7 +2,13 @@
 $pageTitle = "Contact Mashitishi B. Phurutsi - Get in Touch";
 $pageDescription = "Contact Mashitishi B. Phurutsi for campaign inquiries, collaboration opportunities, or to learn more about his vision for higher education governance.";
 
-require_once 'config/database.php';
+// Start session at the beginning
+session_start();
+
+// Generate CSRF token if not exists
+if (!isset($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
 
 $success_message = '';
 $error_message = '';
@@ -11,9 +17,13 @@ $error_message = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
         // Verify CSRF token
-        session_start();
         if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
             throw new Exception('Invalid form submission');
+        }
+        
+        // Simple captcha check
+        if (!isset($_POST['captcha']) || $_POST['captcha'] != '11') {
+            throw new Exception('Please answer the security question correctly (7 + 4 = 11)');
         }
         
         // Validate required fields
@@ -45,8 +55,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             throw new Exception('Message must be between 10 and 2000 characters');
         }
         
+        // Try to connect to database with timeout
+        require_once 'config/database.php';
         $database = new Database();
         $db = $database->getConnection();
+        
+        if (!$db) {
+            throw new Exception('Database connection failed. Please try again later.');
+        }
         
         // Check rate limiting (max 5 messages per IP per day)
         $rate_limit_query = "SELECT COUNT(*) as count FROM contact_messages 
@@ -63,7 +79,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $query = "INSERT INTO contact_messages (name, email, subject, message, ip_address) 
                   VALUES (?, ?, ?, ?, ?)";
         $stmt = $db->prepare($query);
-        $stmt->execute([$name, $email, $subject, $message, $ip_address]);
+        $result = $stmt->execute([$name, $email, $subject, $message, $ip_address]);
+        
+        if (!$result) {
+            throw new Exception('Failed to save message. Please try again.');
+        }
         
         $success_message = "Thank you for your message! We'll get back to you soon.";
         
@@ -76,10 +96,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-// Generate CSRF token
-session_start();
-if (!isset($_SESSION['csrf_token'])) {
-    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+// Helper functions
+function sanitizeInput($data) {
+    return htmlspecialchars(strip_tags(trim($data)));
+}
+
+function getClientIP() {
+    $ipkeys = ['HTTP_CLIENT_IP', 'HTTP_X_FORWARDED_FOR', 'REMOTE_ADDR'];
+    foreach ($ipkeys as $key) {
+        if (array_key_exists($key, $_SERVER) === true) {
+            foreach (explode(',', $_SERVER[$key]) as $ip) {
+                $ip = trim($ip);
+                if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE) !== false) {
+                    return $ip;
+                }
+            }
+        }
+    }
+    return $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
 }
 
 include 'includes/header.php';
@@ -333,3 +367,34 @@ include 'includes/header.php';
                     <span class="stat-number" data-target="13">0</span>
                     <span class="stat-label">Years at TUT</span>
                 </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="1000">0</span>
+                    <span class="stat-label">Students Empowered</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="50">0</span>
+                    <span class="stat-label">Innovations</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<?php include 'includes/footer.php'; ?>
+
+<script>
+// Character counter for message textarea
+document.addEventListener('DOMContentLoaded', function() {
+    const messageTextarea = document.getElementById('message');
+    const charCount = document.getElementById('char-count');
+    
+    if (messageTextarea && charCount) {
+        messageTextarea.addEventListener('input', function() {
+            charCount.textContent = this.value.length;
+        });
+        
+        // Initialize count
+        charCount.textContent = messageTextarea.value.length;
+    }
+});
+</script>

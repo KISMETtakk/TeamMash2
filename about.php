@@ -30,11 +30,8 @@ include 'includes/header.php';
                     </div>
                 </div>
             </div>
-            <div class="about-image animate-slide-in-right">
-                <div class="image-placeholder">
-                    <i class="fas fa-user-tie"></i>
-                    <p>Professional Photo</p>
-                </div>
+            <div class="hero-image animate-slide-in-right">
+                <img src="images/photo7.jpg" alt="Mashitishi B. Phurutsi - Professional Photo" class="professional-photo">
             </div>
         </div>
     </div>
