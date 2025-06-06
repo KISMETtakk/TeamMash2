@@ -89,8 +89,8 @@ include 'includes/header.php';
 <section class="tshiamo-builds-collage">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">My Mission</h2>
-            <p class="section-subtitle">Building bridges between academia, industry, and communities</p>
+            <h2 class="section-title">Gallary</h2>
+            <p class="section-subtitle">Capturing Moments, Sharing Stories</p>
         </div>
   <div class="tshiamo-builds-timeline">
     <div class="tshiamo-builds-timeline-item" tabindex="0">
