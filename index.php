@@ -179,14 +179,26 @@ include 'includes/header.php';
 <section class="campaign-slogan">
     <div class="container">
         <div class="slogan-content animate-on-scroll">
-            <h2 class="slogan-text">"For A Smarter, Stronger Council, Vote Phurutsi"</h2>
-            <p class="slogan-description">
-                This platform is your window into bold ideas, community impact, and a smarter, 
-                stronger future for higher education governance.
-            </p>
-            <a href="endorse.php" class="btn btn-primary btn-lg">
+            <h2 class="slogan-text">Mashitishi Phurutsi Political Promise</h2>
+           <article class="slogan-description">
+    <p>Enable Access to Research Funding — I will advocate for broader access to staff research L-Accounts, eradicating the limitations in using the funds for producing credible impactful scholarship.</p>
+</article>
+
+<article class="slogan-description">
+    <p>Strengthen Support for Senior Lecture Equivalents (SLEs) — By leveraging third-stream income, I will push for increased investment in SLE posts — recognising excellence, retaining talent, and enabling growth in both teaching and research by employing more academics and unlocking promotions.</p>
+</article>
+
+<article class="slogan-description">
+    <p>Champion an “Academics-First” University Culture — I will promote a university ethos where academic work drives institutional direction — where policy, resourcing, and leadership decisions place scholarship, pedagogy, and innovation at the core.</p>
+</article>
+
+<article class="slogan-description">
+    <p>Support the Establishment of Sekhukhune Campus — I will back the strategic growth of the Sekhukhune Campus, bringing quality higher education closer to underserved communities, and creating new opportunities for academic and student advancement.</p>
+</article>
+
+            <!-- <a href="endorse.php" class="btn btn-primary btn-lg">
                 <i class="fas fa-vote-yea"></i> Support My Campaign
-            </a>
+            </a> -->
         </div>
     </div>
 </section>
