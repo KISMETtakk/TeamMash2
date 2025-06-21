@@ -40,7 +40,7 @@
             <div class="nav-logo">
                 <a href="index.php">
                     <span class="logo-text">Phurutsi</span>
-                    <span class="logo-subtitle">For Council</span>
+                    <!-- <span class="logo-subtitle">For Council</span> -->
                 </a>
             </div>
             

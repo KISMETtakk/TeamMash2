@@ -94,44 +94,44 @@ include 'includes/header.php';
         </div>
   <div class="tshiamo-builds-timeline">
     <div class="tshiamo-builds-timeline-item" tabindex="0">
-      <img src="images/photo1.jpg" alt="Kickoff Event 2023">
+      <img src="images/photo1.jpeg" alt="Kickoff Event 2023">
       <div class="tshiamo-builds-annotation">
         <h3>Kickoff Event</h3>
         <p>Launched our project with an amazing team in 2023!</p>
       </div>
     </div>
     <div class="tshiamo-builds-timeline-item" tabindex="0">
-      <img src="images/photo2.jpeg" alt="Community Outreach">
+      <img src="images/photo8.jpeg" alt="Community Outreach">
       <div class="tshiamo-builds-annotation">
-        <h3>Community Outreach</h3>
+        <h3>Graduation Day</h3>
         <p>Engaged with local communities to spread our mission.</p>
       </div>
     </div>
     <div class="tshiamo-builds-timeline-item" tabindex="0">
-      <img src="images/photo3.jpg" alt="Innovation Hackathon">
+      <img src="images/photo3.jpeg" alt="Innovation Hackathon">
       <div class="tshiamo-builds-annotation">
         <h3>Innovation Hackathon</h3>
         <p>Collaborated with students and industry leaders to innovate solutions.</p>
       </div>
     </div>
     <div class="tshiamo-builds-timeline-item" tabindex="0">
-      <img src="images/photo4.jpg" alt="Graduation Day">
+      <img src="images/photo4.JPG" alt="Graduation Day">
       <div class="tshiamo-builds-annotation">
-        <h3>Graduation Day</h3>
+        <h3>TVH 2024</h3>
         <p>Celebrating our achievements with the community.</p>
       </div>
     </div>
         <div class="tshiamo-builds-timeline-item" tabindex="0">
-      <img src="images/photo5.jpg" alt="Graduation Day">
+      <img src="images/photo9.jpeg" alt="Graduation Day">
       <div class="tshiamo-builds-annotation">
-        <h3>Innovation Hackathon</h3>
+        <h3>SA Innovation Summit</h3>
         <p>Celebrating our achievements with the community.</p>
       </div>
     </div>
         <div class="tshiamo-builds-timeline-item" tabindex="0">
-      <img src="images/photo6.jpg" alt="Graduation Day">
+      <img src="images/photo10.jpg" alt="Graduation Day">
       <div class="tshiamo-builds-annotation">
-        <h3>Community Outreach</h3>
+        <h3>SA Innovation Summit</h3>
         <p>Celebrating our achievements with the community.</p>
       </div>
     </div>
